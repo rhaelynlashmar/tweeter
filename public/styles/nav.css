@@ -10,8 +10,11 @@ nav {
   box-sizing: border-box;
 }
 
-nav .logo {
+nav span {
   font-family: 'Bungee', sans-serif;
+}
+
+nav .logo {
   font-size: 2em;
 }
 
@@ -19,8 +22,6 @@ nav .new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Bungee", sans-serif;
-
 }
 
 nav .new-tweet i {
