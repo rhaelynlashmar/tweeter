@@ -10,18 +10,17 @@ nav {
   box-sizing: border-box;
 }
 
-nav span {
-  font-family: 'Bungee', sans-serif;
-}
 
 nav .logo {
   font-size: 2em;
+  font-family: 'Bungee', sans-serif;
 }
 
 nav .new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 nav .new-tweet i {
