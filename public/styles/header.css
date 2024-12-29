@@ -5,6 +5,7 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  height: 400px;
   background-image: url('../images/foggy-birds.png');
   background-size: cover;
   background-repeat: no-repeat;
