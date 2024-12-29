@@ -9,8 +9,8 @@ nav {
   padding: 0 1.5em;
   box-sizing: border-box;
   position: fixed;
+  top: 0;
 }
-
 
 nav .logo {
   font-size: 2em;
