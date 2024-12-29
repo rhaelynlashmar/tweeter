@@ -21,7 +21,7 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
-  background-color: cornsilk;
+  background-color: inherit;
   align-items: center;
 
 }
