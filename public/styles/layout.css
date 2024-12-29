@@ -18,5 +18,12 @@ body {
   padding-top: 120px;
 }
 
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: cornsilk;
+  align-items: center;
+
+}
 
 
