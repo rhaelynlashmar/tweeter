@@ -12,19 +12,3 @@ header {
   background-repeat: no-repeat;
 }
 
-
-/* Avatar Image */
-header .avatar {
-  display: flex;
-  width: 100px; 
-  height: 100px; 
-  border-radius: 50%;
-  background-color: cornsilk;
-  margin-bottom: 10px;
-}
-
-/* User Name */
-header .name {
-  font-size: 1.2em; 
-  color: #502f05; 
-}
