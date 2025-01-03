@@ -4,7 +4,7 @@ $(document).ready(function() {
     let counter = 140 - tweetLength;
     let counterElement = $(this).siblings('.tweet-footer').children('.counter');
 
-    counterElement.val(counter);
+    counterElement.text(counter);
 
     if (counter < 0) {
       counterElement.addClass('red-text');
