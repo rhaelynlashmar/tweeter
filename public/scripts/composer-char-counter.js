@@ -7,10 +7,10 @@ $(document).ready(function() {
     counterElement.text(counter);
 
     if (counter < 0) {
-      counterElement.addClass('red-text');
+      counterElement.addClass('counter-red-text');
     }
     else {
-      counterElement.removeClass('red-text');
+      counterElement.removeClass('counter-red-text');
     }
   });
 });
