@@ -23,6 +23,10 @@
   color: #657786;
   margin-top: 5px;
 }
+.new-tweet .counter.red-text {
+  color: red;
+}
+
 
 .new-tweet #tweet-text {
   color: #545149;
