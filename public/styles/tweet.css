@@ -6,11 +6,11 @@
   padding: 0px 10px;
 }
 
-.tweets-container:hover {
+.tweet:hover {
   box-shadow: 7px 7px #C9CAE2;
 }
 
-article {
+.tweet {
   border: 5px solid #545149;
   margin: 50px 0px;
   padding: 10px;
