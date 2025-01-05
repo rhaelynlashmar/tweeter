@@ -1,5 +1,5 @@
 // escape function to prevent XSS
-const escapeCharacters = function (str) {
+const escapeXSS = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -20,7 +20,7 @@ const createTweetElement = (tweet) => {
         <p class="user-handle">${user.handle}</p>
       </header>
       <section class="tweet-content">
-        <p>${escapeCharacters(content.text)}</p>
+        <p>${escapeXSS(content.text)}</p>
       </section>
       <footer>
         <div class="tweet-timestamp">
