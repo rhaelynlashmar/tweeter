@@ -43,7 +43,6 @@ $(document).ready(function() {
   // Event listener for form submission
   $('#new-tweet-form').on('submit', function(event) {
     event.preventDefault(); // Prevent the default action for form submission
-    console.log('Form submitted');
     const tweetText = $(this).find('textarea').val();
       
 
@@ -53,20 +52,24 @@ $(document).ready(function() {
       return;
     }
 
+    // Error handling for tweet exceeding 140 characters
+    if (tweetText.length > 140) {
+      alert('Tweet cannot exceed 140 characters!');
+      return;
+    }
+
     // Create an AJAX POST request
     $.ajax({
       url: '/tweets',
       method: 'POST',
       data: $(this).serialize(),
       success: function() {
-        // Clear the form
-        $('#new-tweet-form').find('textarea').val('');
 
         // Fetch the latest tweets and POST the new tweet
         loadTweets();
       },
       error: function(err) {
-        console.error('Error posting tweet:', err);
+        console.error('Error posting tweet:', err); // Log error if POST request fails
       }
     });
   });
