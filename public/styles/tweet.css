@@ -1,7 +1,6 @@
 .tweet-header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   background-color: cornsilk;
   padding: 0px 10px;
 }
@@ -49,7 +48,6 @@ h4 {
 footer {
   display: flex;
   justify-content: space-between;
-  padding: 4px;
   background-color: cornsilk;
   align-items: center;
   font-size: medium;
@@ -57,11 +55,11 @@ footer {
 }
 
 
-footer .tweet-actions i {
+.fa {
   color: #4056A1;
   padding-left: 5px;
 }
 
-footer .tweet-actions i:hover {
+.fa:hover {
   color: #CF9F38;
 }
