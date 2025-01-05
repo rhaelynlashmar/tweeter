@@ -6,13 +6,18 @@
   padding: 0px 10px;
 }
 
+.tweets-container:hover {
+  box-shadow: 7px 7px #C9CAE2;
+}
+
 article {
   border: 5px solid #545149;
-  margin: 50px 5px;
+  margin: 50px 0px;
   padding: 10px;
 }
 
- .tweet-avatar .avatar1 {
+
+.tweet-avatar .avatar1 {
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -40,6 +45,7 @@ h4 {
   padding: 0px 10px;
 }
 
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -54,4 +60,8 @@ footer {
 footer .tweet-actions i {
   color: #4056A1;
   padding-left: 5px;
+}
+
+footer .tweet-actions i:hover {
+  color: #CF9F38;
 }
