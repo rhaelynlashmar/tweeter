@@ -1,14 +1,15 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+// escape function to prevent XSS
+const escapeCharacters = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = (tweet) => {
   const { user, content, created_at } = tweet;
 
   const timeAgo = timeago.format(new Date(created_at));
-
+  
   const $tweet = $(`
     <article class="tweet">
       <header class="tweet-header">
@@ -19,7 +20,7 @@ const createTweetElement = (tweet) => {
         <p class="user-handle">${user.handle}</p>
       </header>
       <section class="tweet-content">
-        <p>${content.text}</p>
+        <p>${escapeCharacters(content.text)}</p>
       </section>
       <footer>
         <div class="tweet-timestamp">
@@ -101,6 +102,8 @@ $(document).ready(function() {
   // Initial load of tweets
   loadTweets();
 });
+
+
 
 
 
