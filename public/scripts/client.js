@@ -90,6 +90,7 @@ $(document).ready(function() {
 
   // Function to render tweets
   const renderTweets = (tweets) => {
+    $('#tweets-container').empty(); // Clear the container before rendering new tweets
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet); // prepend to display the latest tweet first
