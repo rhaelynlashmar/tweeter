@@ -35,10 +35,10 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
-renderTweets = (tweets) => {
+const renderTweets = (tweets) => {
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 };
 
