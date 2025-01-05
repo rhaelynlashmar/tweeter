@@ -7,6 +7,8 @@
 const createTweetElement = (tweet) => {
   const { user, content, created_at } = tweet;
 
+  const timeAgo = timeago.format(new Date(created_at));
+
   const $tweet = $(`
     <article class="tweet">
       <header class="tweet-header">
@@ -21,7 +23,7 @@ const createTweetElement = (tweet) => {
       </section>
       <footer>
         <div class="tweet-timestamp">
-          <p>${created_at}t</p>
+          <p>${timeAgo}</p>
         </div>
         <div class="tweet-actions">
           <i class="fa fa-flag"></i>
