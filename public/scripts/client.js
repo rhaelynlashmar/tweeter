@@ -95,6 +95,7 @@ $(document).ready(function() {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet); // prepend to display the latest tweet first
     }
+    $('#tweet-text').val(''); // Clear the text box after rendering tweets
   };
 
   // Initial load of tweets
