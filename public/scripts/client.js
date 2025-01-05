@@ -35,12 +35,67 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
-const renderTweets = (tweets) => {
-  for (const tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').prepend($tweet);
-  }
-};
+
+
+$(document).ready(function() {
+  // Event listener for form submission
+  $('#new-tweet-form').on('submit', function(event) {
+    event.preventDefault(); // Prevent the default action for form submission
+    console.log('Form submitted');
+    const tweetText = $(this).find('textarea').val();
+      
+
+    // Error handling for empty tweet
+    if (!tweetText) {
+      alert('Tweet cannot be empty!');
+      return;
+    }
+
+    // Create an AJAX POST request
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $(this).serialize(),
+      success: function() {
+        // Clear the form
+        $('#new-tweet-form').find('textarea').val('');
+
+        // Fetch the latest tweets and POST the new tweet
+        loadTweets();
+      },
+      error: function(err) {
+        console.error('Error posting tweet:', err);
+      }
+    });
+  });
+
+  // Function to load tweets
+  const loadTweets = function() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      success: function(tweets) {
+        renderTweets(tweets);
+      },
+      error: function(err) {
+        console.error('Error fetching tweets:', err);
+      }
+    });
+  };
+
+  // Function to render tweets
+  const renderTweets = (tweets) => {
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').prepend($tweet); // prepend to display the latest tweet first
+    }
+  };
+
+  // Initial load of tweets
+  loadTweets();
+});
+
+
 
 const data = [
   {
@@ -67,4 +122,3 @@ const data = [
   }
 ]
 
-renderTweets(data);
