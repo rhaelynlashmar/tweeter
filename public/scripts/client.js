@@ -44,12 +44,13 @@ $(document).ready(function() {
   // Event listener for form submission
   $('#new-tweet-form').on('submit', function(event) {
     event.preventDefault(); // Prevent the default action for form submission
-    const tweetText = $(this).find('textarea').val();
+    $('#error-message').slideUp(); // Hide the error message before validation
+    
+    const tweetText = $(this).find('textarea').val().trim();
       
-
     // Error handling for empty tweet
     if (!tweetText) {
-      alert('Tweet cannot be empty!');
+      $('#error-message').text('Cannot Post an Empty Tweet').slideDown();
       return;
     }
 
