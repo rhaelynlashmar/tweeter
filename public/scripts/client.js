@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     // Error handling for tweet exceeding 140 characters
     if (tweetText.length > 140) {
-      alert('Tweet cannot exceed 140 characters!');
+      $('#error-message').text('Tweet cannot exceed 140 characters!').slideDown();
       return;
     }
 
