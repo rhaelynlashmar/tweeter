@@ -53,3 +53,13 @@
   margin-top: 10px;
   font-family: 'bungee', sans-serif;
 }
+
+.new-tweet .error-message {
+  color: #E64F0C;
+  background-color: #F5E2C7;
+  border: 1px solid #E64F0C;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: none;
+}
