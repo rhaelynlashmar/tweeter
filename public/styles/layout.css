@@ -11,6 +11,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: cornsilk;
   font-size: 24px;
@@ -22,7 +24,64 @@ main {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
-  align-items: center;
+  padding: 0px 50px 0px 10px;
 }
+
+
+
+
+
+/* -- Tablet styles -- */
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+  }
+
+  nav {
+    background-image: url(../images/foggy-birds.png);
+    background-color: #D19F35;
+  }
+
+  .profile-header {
+    width: 100%;
+    background-color: #D19F35;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/foggy-birds.png);
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.user-name {
+    margin-bottom: 70px;
+  }
+  
+  main {
+    width: 100%;
+    padding: 0px 30px;
+  }
+}
+
+/* -- Desktop styles -- */
+@media (min-width: 1024px) {
+  body {
+    flex-direction: row;
+  }
+}
+
+/* -- Large desktop styles -- */
+@media (min-width: 1440px) {
+  body {
+    flex-direction: row;
+  }
+}
+
+
+
 
 
