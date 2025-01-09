@@ -14,6 +14,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["gif of desktop-styled tweeter layout"](https://github.com/rhaelynlashmar/tweeter/blob/master/public/docs/tweeter-demo.gif?raw=true)
 
+!["Screenshot of tablet-styled tweeter layout"](https://github.com/rhaelynlashmar/tweeter/blob/master/public/docs/tablet-tweeter-pg.png?raw=true)
+
+!["Screenshot of tweet-box with example tweet"](https://github.com/rhaelynlashmar/tweeter/blob/master/public/docs/tweet-box.png?raw=true)
+
+
 ## Dependencies
 
 - Express
