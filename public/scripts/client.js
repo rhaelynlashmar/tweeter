@@ -1,5 +1,5 @@
 // escape function to prevent XSS
-const escapeXSS = function (str) {
+const escapeXSS = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -8,6 +8,7 @@ const escapeXSS = function (str) {
 const createTweetElement = (tweet) => {
   const { user, content, created_at } = tweet;
 
+  // Using timeago to render/display the time since the tweet was created
   const timeAgo = timeago.format(new Date(created_at));
   
   const $tweet = $(`
@@ -84,7 +85,7 @@ $(document).ready(function() {
       success: function(tweets) {
         renderTweets(tweets);
       },
-      error: function(err) {
+      error: function(err) { // Log error if GET request fails
         console.error('Error fetching tweets:', err);
       }
     });
