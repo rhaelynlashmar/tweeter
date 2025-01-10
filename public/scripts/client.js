@@ -47,7 +47,7 @@ $(document).ready(function() {
     event.preventDefault(); // Prevent the default action for form submission
     $('#error-message').slideUp(); // Hide the error message before validation
     
-    const tweetText = $(this).find('textarea').val().trim();
+    const tweetText = $(this).find('textarea').val();
       
     // Error handling for empty tweet
     if (!tweetText) {
