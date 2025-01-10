@@ -67,7 +67,8 @@ $(document).ready(function() {
       method: 'POST',
       data: $(this).serialize(),
       success: function() {
-
+      $('textarea').val(""); // Clear the tweet textbox
+      $('.counter').val("140");// Reset the counter
         // Fetch the latest tweets and POST the new tweet
         loadTweets();
       },
@@ -98,7 +99,6 @@ $(document).ready(function() {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet); // prepend to display the latest tweet first
     }
-    $('#tweet-text').val(''); // Clear the text box after rendering tweets
   };
 
   // Initial load of tweets
